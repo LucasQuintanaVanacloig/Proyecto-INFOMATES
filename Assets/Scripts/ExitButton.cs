@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class ExitButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void ExitGame()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Si estamos en el editor de Unity
+            #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+            #else
+            // Si es una build, cierra la aplicación
+            Application.Quit();
+            #endif
     }
 }
