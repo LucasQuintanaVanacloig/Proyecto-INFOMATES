@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class InstruccionesButton : MonoBehaviour
 {
-    public void AnarAEscenaJugant()
+    public void AnarAEscenaInstrucciones()
     {
         SceneManager.LoadScene("PantallaInstrucciones");
     }

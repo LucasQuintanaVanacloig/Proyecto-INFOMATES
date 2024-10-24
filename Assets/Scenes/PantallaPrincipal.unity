@@ -753,9 +753,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 19914477}
-        m_TargetAssemblyTypeName: Play, Assembly-CSharp
-        m_MethodName: AnarAEscenaJugant
+      - m_Target: {fileID: 19914478}
+        m_TargetAssemblyTypeName: InstruccionesButton, Assembly-CSharp
+        m_MethodName: AnarAEscenaInstrucciones
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
