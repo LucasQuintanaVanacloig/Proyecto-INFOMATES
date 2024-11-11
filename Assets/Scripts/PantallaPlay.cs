@@ -7,7 +7,7 @@ public class PantallaPlay : MonoBehaviour
 
     private Vector2 MinPantalla, MaxPantalla;
     private float _Vel;
-
+    public float distanciaInteraccion = 5f; // Define la distancia del raycast
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +20,23 @@ public class PantallaPlay : MonoBehaviour
     void Update()
     {
         movimientoPJ();
-    }
+        if (Input.GetKeyDown(KeyCode.E)) // La tecla E para interactuar
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.forward, out hit, distanciaInteraccion))
+            {
+                if (hit.collider.CompareTag("Interactivo")) // Asegúrate de que el objeto tenga la etiqueta "Interactivo"
+                {
+                    var objetoInteractivo = hit.collider.GetComponent<Examen>();
+                    if (objetoInteractivo != null)
+                    {
+                        objetoInteractivo.Interactuar(); // Llama al método en el objeto
+                    }
+                }
+            }
+        }
+    
+}
     private void movimientoPJ()
     {
         //Todo esto para que se mueva el jugador y para que la camara tenga limites.
