@@ -20,7 +20,7 @@ public class PantallaPlay : MonoBehaviour
     void Update()
     {
         movimientoPJ();
-        if (Input.GetKeyDown(KeyCode.E)) // La tecla E para interactuar
+        if (Input.GetKeyDown(KeyCode.F)) // La tecla F para interactuar
         {
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.forward, out hit, distanciaInteraccion))
