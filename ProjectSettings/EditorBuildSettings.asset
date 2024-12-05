@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PantallaHistoria.unity
     guid: f6cfb7866a1537841b1b6c639de276fa
+  - enabled: 1
+    path: Assets/Scenes/PantallaMapa.unity
+    guid: 288686e74ece4994498e9275f0c5cb68
   m_configObjects: {}
