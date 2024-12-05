@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class PantallaPlay : MonoBehaviour
 {
-
+    public GameObject panel;
     private Vector2 MinPantalla, MaxPantalla;
     private float _Vel;
     public float distanciaInteraccion = 5f; // Define la distancia del raycast
@@ -20,6 +22,7 @@ public class PantallaPlay : MonoBehaviour
     void Update()
     {
         movimientoPJ();
+        panel.SetActive(false);
         if (Input.GetKeyDown(KeyCode.F)) // La tecla F para interactuar
         {
             RaycastHit hit;
@@ -37,6 +40,15 @@ public class PantallaPlay : MonoBehaviour
         }
     
 }
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        // Verificar si el objeto que colisiona tiene el tag "Personaje"
+        if (other.gameObject.CompareTag("Personaje")) // Cambiado el tag a "Personaje"
+        {
+            // Cargar la nueva escena automáticamente al acercarse
+            SceneManager.LoadScene("PantallaMapa");
+        }
+    }
     private void movimientoPJ()
     {
         //Todo esto para que se mueva el jugador y para que la camara tenga limites.
