@@ -18,12 +18,12 @@ public class Examen : MonoBehaviour
     {
 
         Interactuar();
-        transform.Rotate(Vector3.up, 20 * Time.deltaTime); // Rota el objeto constantemente
+        transform.Rotate(Vector3.up, 100 * Time.deltaTime); // Rota el objeto constantemente
     }
     public void Interactuar()
     {
         Debug.Log("¡El personaje ha interactuado con el objeto!");
-        panel.SetActive(true);
+
 
         // Aquí puedes añadir la lógica de lo que debe suceder al interactuar
         // Ejemplos:
@@ -31,6 +31,20 @@ public class Examen : MonoBehaviour
         // Cambiar el color o estado del objeto
         // Destruir el objeto
         // Dar un mensaje al jugador, etc.
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // if(other.gameObject.tag =="Personaje")
+        if (other.CompareTag("Personaje"))
+        {
+            // aqui pasa algo de generar y abrir examen
+
+
+
+            // abrir panel del folio del examen en si
+            panel.SetActive(true);
+        }
     }
 
 }
