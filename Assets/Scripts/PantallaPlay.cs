@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class PantallaPlay : MonoBehaviour
 {
-    public GameObject panel;
+    //public GameObject panel;
     private Vector2 MinPantalla, MaxPantalla;
     private float _Vel;
     public float distanciaInteraccion = 5f; // Define la distancia del raycast
@@ -22,7 +22,7 @@ public class PantallaPlay : MonoBehaviour
     void Update()
     {
         movimientoPJ();
-        panel.SetActive(false);
+
         if (Input.GetKeyDown(KeyCode.F)) // La tecla F para interactuar
         {
             RaycastHit hit;
