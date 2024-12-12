@@ -864,8 +864,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 7 x 6 =
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3400c263b59c3b241b16368affd81b9c, type: 2}
+  m_sharedMaterial: {fileID: 2097653685774363213, guid: 3400c263b59c3b241b16368affd81b9c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -889,14 +889,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_fontStyle: 1
+  m_HorizontalAlignment: 16
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1844,7 +1844,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1570167093}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a687571aa5162b945a82e26efc33735a, type: 3}
+  m_Script: {fileID: 11500000, guid: 85627ad5029803a46be13bea58c55cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 564307038}
@@ -1862,7 +1862,7 @@ GameObject:
   - component: {fileID: 2091050766}
   - component: {fileID: 2091050765}
   - component: {fileID: 2091050767}
-  - component: {fileID: 2091050768}
+  - component: {fileID: 2091050769}
   m_Layer: 0
   m_Name: CapturaExamen 3
   m_TagString: Untagged
@@ -1982,7 +1982,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5778275, y: 3.4474323}
   m_EdgeRadius: 0
---- !u!114 &2091050768
+--- !u!114 &2091050769
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1991,7 +1991,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2091050764}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a687571aa5162b945a82e26efc33735a, type: 3}
+  m_Script: {fileID: 11500000, guid: 105e544349b462d4bb4efdda01ba3921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 564307038}
