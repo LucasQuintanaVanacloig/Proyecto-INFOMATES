@@ -11,7 +11,7 @@ public class Examen : MonoBehaviour
     public int respuesta;
     public TextMeshProUGUI problemaText;
     public TMP_InputField respuestaUsuario;
-    bool iscorrect = false;
+    public bool iscorrect = false;
     bool isplayerColliding = false;
     // Start is called before the first frame update
     void Start()

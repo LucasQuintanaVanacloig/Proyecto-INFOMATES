@@ -7,6 +7,7 @@ TagManager:
   - Personaje
   - Puerta
   - Enemy
+  - door
   layers:
   - Default
   - TransparentFX
