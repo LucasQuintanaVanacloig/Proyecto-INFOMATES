@@ -8,8 +8,16 @@ public class DoorController : MonoBehaviour
     public Examen2 examen2; // Referencia al script Examen2
     public Examen3 examen3; // Referencia al script Examen3
     public bool examensCorrectes = false;
+    public Sprite doorCloseSprite;
+    public Sprite doorOpenSprite;
+    SpriteRenderer currentRenderer;
 
-    
+    private void Start()
+    {
+        currentRenderer = GetComponent<SpriteRenderer>();
+        currentRenderer.sprite = doorCloseSprite;
+    }
+
     private void Update()
     {
         // Debug.Log(examen1.iscorrect +" - " +examen2.correct2 + " - " + examen3.correct);
@@ -17,23 +25,32 @@ public class DoorController : MonoBehaviour
         // Verifica los valores de los booleanos en los scripts de los exámenes
         if (examen1.iscorrect && examen2.correct2 && examen3.correct)
         {
-                examensCorrectes |= true;
+            currentRenderer.sprite = doorOpenSprite;
+            examensCorrectes |= true;
                 }
     }
-        
-    
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+
+    /* private void OnTriggerEnter2D(Collider2D collision)
+     {
+         if (collision.CompareTag("Personaje"))
+         {
+             if (examensCorrectes == true)
+             {
+                 SceneManager.LoadScene("PantallaFinal");
+
+             }
+         }
+
+     }*/
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.CompareTag("Personaje"))
+        // if(other.gameObject.tag =="Personaje")
+        if (other.CompareTag("Personaje")&& examensCorrectes == true)
         {
-            if (examensCorrectes == true)
-            {
-                SceneManager.LoadScene("PantallaFinal");
-
-            }
+            SceneManager.LoadScene("PantallaFinal");
         }
-        
     }
 
 }
