@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; // Necesario para cargar escenas
 
 public class EnemyAI : MonoBehaviour
 {
@@ -11,16 +12,16 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
-        // Busca al personaje principal por el tag "Personaje"
-        GameObject playerObject = GameObject.FindGameObjectWithTag("Personaje");
+        // Busca al personaje principal por el nombre "princi"
+        GameObject playerObject = GameObject.Find("princi");
 
-        if (playerObject != null)
+        if (playerObject != null && playerObject.CompareTag("Personaje"))
         {
             player = playerObject.transform;
         }
         else
         {
-            Debug.LogError("No se encontró un objeto con el tag 'Personaje'.");
+            Debug.LogError("No se encontró un objeto llamado 'princi' con el tag 'Personaje'.");
         }
 
         lastPosition = transform.position;
@@ -59,5 +60,20 @@ public class EnemyAI : MonoBehaviour
         {
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // Mirando izquierda
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Detectar colisión con el jugador
+        if (collision.gameObject.CompareTag("Personaje") && collision.gameObject.name == "princi")
+        {
+            Destroy(collision.gameObject); // Destruye al jugador
+            Invoke("LoadDeathScreen", 2f); // Espera 2 segundos y carga la pantalla de muerte
+        }
+    }
+
+    private void LoadDeathScreen()
+    {
+        SceneManager.LoadScene("PantallaMuerte"); // Carga la escena de muerte
     }
 }

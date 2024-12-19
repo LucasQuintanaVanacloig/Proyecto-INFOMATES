@@ -464,6 +464,7 @@ GameObject:
   - component: {fileID: 453097438}
   - component: {fileID: 453097437}
   - component: {fileID: 453097440}
+  - component: {fileID: 453097441}
   m_Layer: 0
   m_Name: Fantasmachan
   m_TagString: Enemy
@@ -553,8 +554,8 @@ Transform:
   m_GameObject: {fileID: 453097436}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.78, y: -4.73, z: -0.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.7666, y: -4.7588, z: -0.1}
+  m_LocalScale: {x: 1.0717, y: 1.097, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -571,9 +572,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c69ada711c0ce046a21cd8a882174fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1.5
   stoppingDistance: 0
   flipSprite: 1
+--- !u!61 &453097441
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453097436}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.008954585, y: -0.0000001937151}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.375, y: 0.59375}
+    newSize: {x: 0.12, y: 0.19}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.52185416, y: 0.7127224}
+  m_EdgeRadius: 0
 --- !u!1 &465973169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,7 +1757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017219a0c44deb44a8d01a512ce20035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 3
 --- !u!95 &1339390988
 Animator:
   serializedVersion: 5
@@ -1797,8 +1843,7 @@ Transform:
   m_LocalPosition: {x: -0.57, y: 0.65, z: -0.1}
   m_LocalScale: {x: 0.8312, y: 0.7056, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1433203738}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1398229682
@@ -1857,6 +1902,7 @@ GameObject:
   - component: {fileID: 1433203738}
   - component: {fileID: 1433203737}
   - component: {fileID: 1433203736}
+  - component: {fileID: 1433203739}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1932,12 +1978,27 @@ Transform:
   m_GameObject: {fileID: 1433203735}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9.9}
-  m_LocalScale: {x: 1.2030798, y: 1.4172336, z: 1}
+  m_LocalPosition: {x: -0.57, y: 0.65, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1339390990}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1433203739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433203735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 864349c96e320b140994734e2ea9eb7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1339390990}
+  offset: {x: 0, y: 0, z: -10}
+  smoothSpeed: 0.125
 --- !u!1 &1552565753
 GameObject:
   m_ObjectHideFlags: 0
@@ -44585,6 +44646,7 @@ EdgeCollider2D:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1433203738}
   - {fileID: 1398229684}
   - {fileID: 1339390990}
   - {fileID: 931355699}

@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PantallaMapa.unity
     guid: 288686e74ece4994498e9275f0c5cb68
+  - enabled: 1
+    path: Assets/Scenes/PantallaFinal.unity
+    guid: 05cb7ee54084eaf4fbb29e94930b5d83
+  - enabled: 1
+    path: Assets/Scenes/PantallaMuerte.unity
+    guid: 16bb70ffcd81bd2459ba02f01f9f87ee
   m_configObjects: {}
