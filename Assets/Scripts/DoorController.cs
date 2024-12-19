@@ -30,20 +30,6 @@ public class DoorController : MonoBehaviour
                 }
     }
 
-
-
-    /* private void OnTriggerEnter2D(Collider2D collision)
-     {
-         if (collision.CompareTag("Personaje"))
-         {
-             if (examensCorrectes == true)
-             {
-                 SceneManager.LoadScene("PantallaFinal");
-
-             }
-         }
-
-     }*/
     private void OnTriggerEnter2D(Collider2D other)
     {
         // if(other.gameObject.tag =="Personaje")
@@ -52,5 +38,4 @@ public class DoorController : MonoBehaviour
             SceneManager.LoadScene("PantallaFinal");
         }
     }
-
 }
