@@ -13,9 +13,11 @@ public class Examen2 : MonoBehaviour
     public TMP_InputField respuestaUsuario;
     public bool correct2 = false;
     bool isplayerColliding = false;
+    public Contador contador;
     // Start is called before the first frame update
     void Start()
     {
+        
         respuesta = 0;
         correct2 = false;
         panel.SetActive(false);
@@ -60,6 +62,7 @@ public class Examen2 : MonoBehaviour
             GenerarExamen();
             // Respuesta();
             isplayerColliding = true;
+            contador.gameObject.SetActive(true);
             // abrir panel del folio del examen en si
             panel.SetActive(true);
         }
@@ -83,6 +86,7 @@ public class Examen2 : MonoBehaviour
         {
             correct2 = true;
             isplayerColliding = false;
+            contador.IncreaseScore(1);
             panel.SetActive(false);
             //resolver examen que sume y tal
         }

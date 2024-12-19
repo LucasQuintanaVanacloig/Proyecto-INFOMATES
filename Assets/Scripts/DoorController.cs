@@ -21,7 +21,7 @@ public class DoorController : MonoBehaviour
     private void Update()
     {
         // Debug.Log(examen1.iscorrect +" - " +examen2.correct2 + " - " + examen3.correct);
-        Debug.Log("examensCorrectes=" + examensCorrectes);
+      //  Debug.Log("examensCorrectes=" + examensCorrectes);
         // Verifica los valores de los booleanos en los scripts de los exámenes
         if (examen1.iscorrect && examen2.correct2 && examen3.correct)
         {
